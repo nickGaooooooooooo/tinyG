@@ -7,7 +7,16 @@ const routes = [
         name: 'Home',
         component: Home
     },
-    // 其他路由配置
+    {
+        path: "/",
+        name: "Page",
+        component: () => import("../views/index.vue"),
+        children: [{
+            path: 'doc',
+            name: 'Doc',
+            component: () => import("../views/doc/index.vue"),
+        }]
+    },
 ];
 
 const router = createRouter({
