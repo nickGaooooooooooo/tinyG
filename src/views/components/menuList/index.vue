@@ -1,67 +1,37 @@
 <template>
     <template v-for="item of menuData" :key="item">
-        <el-menu-item v-if="item.type !== 'folder' && item.type !== 'workItem'" :index="item.id" @click="
-            handleSelectPage(
-                item.id,
-                item.type,
-                item.label,
-                item.parentId,
-                item.docId,
-                item.workItemTypeId
-            )
-            ">
+        <el-menu-item v-if="item.type !== 'folder' && item.type !== 'workItem'" :index="item.id"
+            @click=" handleSelectPage(item.id, item.name)">
             <template #title>
                 <span>{{ item.label }}</span>
             </template>
         </el-menu-item>
         <el-sub-menu v-else :index="item.id" :id="item.id">
             <template #title>
-                <span style="width: 100%;">{{ item.label }}</span>
+                <span>{{ item.label }}</span>
             </template>
             <MenuList :menuData="item.children" />
         </el-sub-menu>
     </template>
 </template>
-  
-<script lang="ts">
+<script>
 export default {
     name: "MenuList",
 };
 </script>
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 const props = defineProps(["menuData"]);
-
-const handleSelectPage = (
-    id: string,
-    type: string,
-    label: string,
-    parentId: string,
-    docId: string,
-    workItemTypeId: string
-) => {
-    //点击底层目录跳转页面方法
-    // console.log("select", id, type);
+const handleSelectPage = (id, name) => {
+    router.push(`/page/${name}`);
 
 };
-const handleSelectSpace = (id: string, label: string, type: string) => {
-    // console.log('点击空间', label, id)
-    document.getElementById(`${id}`)?.setAttribute("class", "el-sub-menu active");
-    switch (true) {
-        case type == "workItem":
-            router.push("/project/workItem");
-            break;
-        default:
-            router.push(`/project/menuOverview/${label}/${id}`);
-            break;
-    }
+const handleSelectSpace = (id) => {
 };
 defineExpose({ handleSelectPage });
-const test = (id: any, name: string) => {
-    console.log("点击点击点击", id, name);
-};
+
 </script>
 <style scoped>
 .icon {

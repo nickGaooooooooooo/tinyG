@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^5.1.1",
+    "axios": "^1.6.8",
     "element-plus": "^2.7.0",
     "tinymce": "^7.0.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "sass": "^1.75.0",
     "sass-loader": "^14.2.1",

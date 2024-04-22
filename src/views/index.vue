@@ -3,7 +3,7 @@
         <div class="left">
             <el-menu :default-active="defaultId" class="el-menu-vertical-demo" background-color="#005f87" text-color="#fff">
                 <MenuList :menuData="menuList" />
-                <div style="border: 1px solid #0f789b"></div>
+                <!-- <div style="border: 1px solid #0f789b"></div> -->
             </el-menu>
         </div>
         <div class="right">
@@ -45,8 +45,8 @@ const menuList = ref([
         children: [
             {
                 id: 'test1',
-                name: 'test1',
-                label: '测试页1',
+                name: 'doc',
+                label: 'tinymce测试',
                 icon: 'Document',
                 type: 'page',
                 parentId: '',
