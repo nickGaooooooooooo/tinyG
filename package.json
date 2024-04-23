@@ -12,6 +12,7 @@
     "@tinymce/tinymce-vue": "^5.1.1",
     "axios": "^1.6.8",
     "element-plus": "^2.7.0",
+    "mammoth": "^1.7.1",
     "tinymce": "^7.0.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
