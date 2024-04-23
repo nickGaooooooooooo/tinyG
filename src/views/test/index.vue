@@ -1,7 +1,7 @@
 <template>
     <div class="common-layout">
         <el-container style="height: 100%">
-            <el-header class="header">通义千问</el-header>
+            <el-header class="header">通义千问111</el-header>
             <el-container style="height: 100%">
                 <!--侧边栏暂时搁置-->
                 <el-aside width="200px" class="aside" v-if="false">
