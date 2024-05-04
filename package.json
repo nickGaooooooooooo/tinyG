@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^5.1.1",
+    "@vueup/vue-quill": "^1.0.0-alpha.40",
     "axios": "^1.6.8",
     "element-plus": "^2.7.0",
     "mammoth": "^1.7.1",
     "tinymce": "^7.0.1",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "y-quill": "^1.0.0",
+    "yjs": "^13.6.15"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",

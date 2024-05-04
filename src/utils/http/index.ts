@@ -2,7 +2,7 @@ import axios, { type InternalAxiosRequestConfig, type AxiosInstance, type AxiosR
 
 // 通过create方法,创建axios实例
 const axiosInstance: AxiosInstance = axios.create({
-  timeout: 5000,
+  timeout: 100000,
   withCredentials: false
 })
 

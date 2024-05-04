@@ -1,7 +1,8 @@
 <template>
     <div class="home">
         <div class="left">
-            <el-menu :default-active="defaultId" class="el-menu-vertical-demo" background-color="#005f87" text-color="#fff">
+            <el-menu :default-active="defaultId" class="el-menu-vertical-demo" background-color="#005f87"
+                text-color="#fff">
                 <MenuList :menuData="menuList" />
                 <!-- <div style="border: 1px solid #0f789b"></div> -->
             </el-menu>
@@ -52,6 +53,15 @@ const menuList = ref([
                 parentId: '',
                 children: []
             },
+            {
+                id: 'quill',
+                name: 'quill',
+                label: 'quill测试',
+                icon: 'Document',
+                type: 'page',
+                parentId: '',
+                children: []
+            },
         ]
     },
 ]);
@@ -67,7 +77,8 @@ const defaultId = ref('home')
         flex: 1;
         padding: 0 0 0 10px;
         height: 100%;
-        .el-menu-vertical-demo{
+
+        .el-menu-vertical-demo {
             height: 100%;
             border-radius: 5px;
         }

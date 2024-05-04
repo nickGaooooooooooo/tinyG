@@ -7,6 +7,6 @@ export const tongYiApi = (params) => {
         url: '/qwen/api/v1/services/aigc/text-generation/generation',
         method: 'post',
         data: params,
-        timeout: 10000
+        timeout: 100000
     })
 }
